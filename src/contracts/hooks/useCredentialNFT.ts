@@ -1,7 +1,7 @@
 import { useReadContract, useWriteContract, useWaitForTransactionReceipt, useChainId } from 'wagmi'
 import { credentialNFTAbi } from '@/contracts/abis/CredentialNFT'
 import { getCredentialNFTAddress } from '@/contracts/addresses'
-import { keccak256, toUtf8Bytes } from 'viem'
+import { keccak256, stringToBytes } from 'viem'
 
 export function useIssueCredential() {
   const chainId = useChainId()
@@ -21,7 +21,7 @@ export function useIssueCredential() {
     const address = getCredentialNFTAddress(chainId)
     const hashBytes = metadataHash.startsWith('0x') 
       ? (metadataHash as `0x${string}`)
-      : keccak256(toUtf8Bytes(metadataHash))
+      : keccak256(stringToBytes(metadataHash))
 
     writeContract({
       address,
