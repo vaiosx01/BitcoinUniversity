@@ -67,15 +67,11 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/screenshots/desktop.png',
         sizes: '1280x720',
         type: 'image/png',
-        form_factor: 'wide',
-        label: 'Bitcoin University Desktop View',
       },
       {
         src: '/screenshots/mobile.png',
         sizes: '750x1334',
         type: 'image/png',
-        form_factor: 'narrow',
-        label: 'Bitcoin University Mobile View',
       },
     ],
     shortcuts: [
@@ -103,17 +99,25 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     share_target: {
       action: '/share',
-      method: 'POST',
+      method: 'post',
       enctype: 'multipart/form-data',
-      params: {
-        title: 'title',
-        text: 'text',
-        url: 'url',
-      },
+      params: [
+        {
+          name: 'title',
+          value: 'title',
+        },
+        {
+          name: 'text',
+          value: 'text',
+        },
+        {
+          name: 'url',
+          value: 'url',
+        },
+      ],
     },
     // Nuevas características 2025
     prefer_related_applications: false,
-    iarc_rating_id: '',
     related_applications: [],
     // Mejoras de seguridad
     protocol_handlers: [],
