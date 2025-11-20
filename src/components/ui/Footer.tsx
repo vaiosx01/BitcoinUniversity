@@ -239,6 +239,10 @@ export function Footer() {
                 Built on{' '}
                 <span className="text-btcu-primary font-semibold">Blockchain</span>
               </p>
+              <span className="hidden sm:inline">•</span>
+              <p>
+                Made by <span className="text-btcu-primary font-semibold">Vaiosx</span>
+              </p>
             </div>
             
             <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-gray-500">
