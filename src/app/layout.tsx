@@ -8,7 +8,6 @@ import '@/styles/neural-effects.css'
 import { Providers } from './providers'
 import { NeuralBackground } from '@/components/ui/NeuralBackground'
 import { InstallPWA } from '@/components/pwa/InstallPWA'
-import { UpdateAvailable } from '@/components/pwa/UpdateAvailable'
 import { AppKitProvider } from '@/context/AppKitProvider'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -102,7 +101,6 @@ export default async function RootLayout({
             <NeuralBackground />
             {children}
             <InstallPWA />
-            <UpdateAvailable />
           </Providers>
         </AppKitProvider>
       </body>
