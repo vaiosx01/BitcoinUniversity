@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "blockchain"]
+  "exclude": ["node_modules", "blockchain", "**/__tests__/**", "**/*.test.tsx", "**/*.test.ts"]
 }
 

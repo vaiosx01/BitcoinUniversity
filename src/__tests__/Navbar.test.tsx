@@ -1,7 +1,9 @@
 /**
  * @jest-environment jsdom
+ * @eslint-disable
  */
 
+/* eslint-disable react/display-name */
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { Navbar } from '@/components/ui/Navbar'
 import { useInstallPWA } from '@/hooks/useInstallPWA'
@@ -33,9 +35,11 @@ jest.mock('react-hot-toast', () => ({
 
 // Mock Next.js Link
 jest.mock('next/link', () => {
-  return ({ children, href, ...props }: any) => {
+  const MockLink = ({ children, href, ...props }: any) => {
     return <a href={href} {...props}>{children}</a>
   }
+  MockLink.displayName = 'MockLink'
+  return MockLink
 })
 
 // Mock ConnectButton and NetworkSwitcher
