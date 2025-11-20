@@ -15,6 +15,8 @@ import {
 } from 'lucide-react'
 import { ConnectButton } from '@/components/web3/ConnectButton'
 import { NetworkSwitcher } from '@/components/web3/NetworkSwitcher'
+import { useInstallPWA } from '@/hooks/useInstallPWA'
+import { Download } from 'lucide-react'
 
 const navigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -27,6 +29,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const { install, isInstallable } = useInstallPWA()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,6 +119,17 @@ export function Navbar() {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-2 xl:gap-4">
+              {isInstallable && (
+                <motion.button
+                  onClick={install}
+                  className="flex items-center gap-2 px-3 xl:px-4 py-2 rounded-lg bg-btcu-primary/20 hover:bg-btcu-primary/30 border border-btcu-primary/30 text-btcu-primary font-medium transition-all text-sm xl:text-base"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Install PWA</span>
+                </motion.button>
+              )}
               <NetworkSwitcher />
               <ConnectButton />
             </div>
@@ -187,6 +201,23 @@ export function Navbar() {
                 })}
 
                 <div className="pt-6 border-t border-white/10 space-y-4">
+                  {isInstallable && (
+                    <div className="px-4">
+                      <p className="text-sm text-gray-400 mb-3 font-medium">Install App</p>
+                      <motion.button
+                        onClick={() => {
+                          install()
+                          closeMenu()
+                        }}
+                        className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-btcu-primary/20 hover:bg-btcu-primary/30 border border-btcu-primary/30 text-btcu-primary font-medium transition-all"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Download className="w-5 h-5" />
+                        <span>Install PWA</span>
+                      </motion.button>
+                    </div>
+                  )}
                   <div className="px-4">
                     <p className="text-sm text-gray-400 mb-3 font-medium">Network</p>
                     <NetworkSwitcher />
