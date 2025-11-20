@@ -178,7 +178,7 @@ export default function CredentialsPage() {
 
       return matchesSearch && matchesFilter
     })
-  }, [searchTerm, selectedFilter])
+  }, [searchTerm, selectedFilter, credentials])
 
   const getCredentialTypeColor = (type: Credential['type']) => {
     switch (type) {

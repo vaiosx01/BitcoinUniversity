@@ -63,7 +63,7 @@ export default function CourseDetailPage() {
               decentralized applications.
             </p>
             <div className="space-y-2">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">What you'll learn:</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">What you&apos;ll learn:</h3>
               <ul className="space-y-2 text-sm sm:text-base text-gray-300">
                 <li className="flex items-start gap-2">
                   <BookOpen size={16} className="text-btcu-primary flex-shrink-0 mt-0.5" />

@@ -41,7 +41,7 @@ export function InstallPWA() {
           <p className="font-semibold mb-2">Instalar en iOS:</p>
           <ol className="list-decimal list-inside space-y-1 text-xs">
             <li>Toca el botón Compartir</li>
-            <li>Selecciona "Añadir a pantalla de inicio"</li>
+            <li>Selecciona &quot;Añadir a pantalla de inicio&quot;</li>
           </ol>
         </div>,
         { duration: 6000 }

@@ -408,7 +408,7 @@ export function SearchBar({
                   onClick={() => handleSearch(query)}
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-btcu-primary hover:bg-btcu-primary/90 text-white font-semibold transition-colors"
                 >
-                  <span>Search for "{query}"</span>
+                  <span>Search for &quot;{query}&quot;</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

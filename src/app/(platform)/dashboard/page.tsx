@@ -218,7 +218,7 @@ export default function DashboardPage() {
                 My Dashboard
               </h1>
               <p className="text-sm sm:text-base lg:text-lg text-gray-400">
-                Welcome back! Here's your learning progress and achievements.
+                Welcome back! Here&apos;s your learning progress and achievements.
               </p>
             </div>
             <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
