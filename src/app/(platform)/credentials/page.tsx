@@ -66,7 +66,7 @@ export default function CredentialsPage() {
   const [selectedCredential, setSelectedCredential] = useState<Credential | null>(null)
 
   // Mock data - In real app, this would come from blockchain
-  const credentials: Credential[] = [
+  const credentials: Credential[] = useMemo(() => [
     {
       id: 1,
       tokenId: '#1234',
@@ -152,7 +152,7 @@ export default function CredentialsPage() {
       issuer: 'Bitcoin University',
       recipient: address || '0x...',
     },
-  ]
+  ], [address])
 
   useEffect(() => {
     if (!isConnected) {
