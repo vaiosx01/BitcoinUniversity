@@ -15,8 +15,8 @@ export function reportWebVitals(metric: WebVitals) {
   // Enviar métricas a tu servicio de analytics
   if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
     // Ejemplo: Google Analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', metric.name, {
+    if (typeof (window as any).gtag !== 'undefined') {
+      ;(window as any).gtag('event', metric.name, {
         event_category: 'Web Vitals',
         value: Math.round(metric.value),
         event_label: metric.id,
