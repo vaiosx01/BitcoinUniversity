@@ -21,6 +21,18 @@ export function useInstallPWA() {
       return
     }
 
+    // Check if PWA is installable (show button by default if not installed)
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    const isAndroid = /Android/.test(navigator.userAgent)
+    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)
+    const isEdge = /Edg/.test(navigator.userAgent)
+    
+    // Show install button if not installed and on a supported browser
+    if (!isStandalone && (isChrome || isEdge || isAndroid || isIOS)) {
+      setIsInstallable(true)
+    }
+
     const handler = (e: Event) => {
       e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
