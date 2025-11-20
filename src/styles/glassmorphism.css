@@ -1,0 +1,89 @@
+/* Glassmorphism Core Styles */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  background: rgba(10, 14, 39, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+/* Neural Network Background Effects */
+.neural-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(247, 147, 26, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: neural-move 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes neural-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Frosted Glass Card */
+.frosted-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Glow Effects for CTAs */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(247, 147, 26, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-orange:hover {
+  box-shadow: 0 0 30px rgba(247, 147, 26, 0.8), 0 0 60px rgba(247, 147, 26, 0.4);
+}
+
+/* Shadow for Navbar */
+.shadow-glass {
+  box-shadow: 
+    0 4px 24px 0 rgba(31, 38, 135, 0.2),
+    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+

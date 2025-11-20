@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#F7931A" opacity="0.2"/>
+  <path d="M100 30L120 70L100 90L80 70L100 30Z" fill="#F7931A"/>
+  <path d="M100 110L120 150L100 170L80 150L100 110Z" fill="#4A90E2"/>
+  <circle cx="100" cy="100" r="20" fill="#50E3C2"/>
+  <text x="100" y="195" font-family="Arial" font-size="16" fill="#F7931A" text-anchor="middle" font-weight="bold">BTCU</text>
+</svg>
+

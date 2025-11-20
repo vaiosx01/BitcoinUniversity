@@ -1,0 +1,44 @@
+{
+  "name": "bitcoin-university-blockchain",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:base": "hardhat run scripts/deploy.ts --network baseSepolia",
+    "deploy:arbitrum": "hardhat run scripts/deploy.ts --network arbitrumSepolia",
+    "deploy:optimism": "hardhat run scripts/deploy.ts --network optimismSepolia",
+    "verify:base": "hardhat verify --network baseSepolia",
+    "typechain": "hardhat typechain"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.2",
+    "@nomicfoundation/hardhat-ignition": "^0.15.15",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.16",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.2",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@nomicfoundation/ignition-core": "^0.15.14",
+    "@openzeppelin/hardhat-upgrades": "^3.0.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.22.0",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": "^10.9.0",
+    "typechain": "^8.3.2",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.0"
+  }
+}

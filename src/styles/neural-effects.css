@@ -1,0 +1,31 @@
+/* Additional neural network effects */
+.neural-node {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(247, 147, 26, 0.6);
+  border-radius: 50%;
+  animation: neural-pulse 4s ease-in-out infinite;
+}
+
+.neural-connection {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(74, 144, 226, 0.3),
+    transparent
+  );
+  animation: neural-connection-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neural-connection-pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+

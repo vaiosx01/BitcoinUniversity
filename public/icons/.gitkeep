@@ -1,0 +1,5 @@
+# Este directorio contiene los iconos PWA
+# Ejecuta: node scripts/generate-icons.js para generarlos
+# O crea manualmente iconos en los siguientes tamaños:
+# - 72x72, 96x96, 128x128, 144x144, 152x152, 192x192, 384x384, 512x512
+
