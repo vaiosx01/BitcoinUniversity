@@ -41,8 +41,8 @@ const features = [
   },
   {
     icon: Network,
-    title: 'Multi-Chain Support',
-    description: 'Deployed on Base, Arbitrum, and Optimism. Choose the network that best fits your needs and gas costs.',
+    title: 'Ethereum Network Support',
+    description: 'Deployed on Sepolia Testnet and Ethereum Mainnet. Secure, reliable, and accessible to everyone.',
     color: 'from-btcu-accent to-teal-600',
   },
   {
@@ -99,7 +99,7 @@ const benefits = [
 ]
 
 const stats = [
-  { value: '3', label: 'Blockchain Networks', icon: Layers },
+  { value: '2', label: 'Blockchain Networks', icon: Layers },
   { value: '100%', label: 'On-Chain Verification', icon: FileCheck },
   { value: '24/7', label: 'Global Access', icon: Globe },
   { value: '0', label: 'Forgery Risk', icon: Shield },
@@ -133,12 +133,12 @@ const howItWorks = [
 ]
 
 const technologies = [
-  { name: 'Next.js 14', description: 'Modern React framework' },
-  { name: 'Solidity', description: 'Smart contract language' },
-  { name: 'Ethereum L2s', description: 'Base, Arbitrum, Optimism' },
-  { name: 'IPFS', description: 'Decentralized storage' },
-  { name: 'OpenZeppelin', description: 'Security standards' },
-  { name: 'Wagmi + Viem', description: 'Web3 integration' },
+  { name: 'Next.js 14', description: 'Modern React framework with App Router' },
+  { name: 'Solidity 0.8.24', description: 'Smart contract language' },
+  { name: 'Ethereum Networks', description: 'Sepolia Testnet & Mainnet' },
+  { name: 'IPFS', description: 'Decentralized storage for metadata' },
+  { name: 'OpenZeppelin', description: 'Battle-tested security standards' },
+  { name: 'Wagmi + Viem', description: 'Type-safe Web3 integration' },
 ]
 
 export default function LandingPage() {
